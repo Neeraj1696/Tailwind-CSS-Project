@@ -1,4 +1,5 @@
 import React from "react";
+import ToggleNavLogin from "./ToggleNavLogin";
 
 function Nav() {
   return (
@@ -10,6 +11,7 @@ function Nav() {
             <li>Home</li>
             <li>About</li>
             <li>Contact Us</li>
+            <ToggleNavLogin />
           </ul>
         </div>
       </main>
