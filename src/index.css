@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.MuiButton-label{
+    color: white;
+    font-size: 12px;
+}

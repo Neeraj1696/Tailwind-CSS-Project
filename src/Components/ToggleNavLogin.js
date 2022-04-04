@@ -8,14 +8,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-  },
-  paper: {
-    marginRight: theme.spacing(2),
-  },
-}));
+const useStyles = makeStyles((theme) => ({}));
 
 export default function MenuListComposition() {
   const classes = useStyles();
@@ -54,20 +47,21 @@ export default function MenuListComposition() {
   return (
     <div className={classes.root}>
       <Paper className={classes.paper}>
-        <MenuList>
+        {/* <MenuList>
           <MenuItem>Profile</MenuItem>
           <MenuItem>My account</MenuItem>
           <MenuItem>Logout</MenuItem>
-        </MenuList>
+        </MenuList> */}
       </Paper>
       <div>
         <Button
+          className="flex m-2 px-4 space-x-4 justify-end items-center  "
           ref={anchorRef}
-          aria-controls={open ? "menu-list-grow" : undefined}
+          aria-controls={open ? "menu-list-grow" : ""}
           aria-haspopup="true"
           onClick={handleToggle}
         >
-          Toggle Menu Grow
+          LogIn Menu
         </Button>
         <Popper
           open={open}
@@ -77,13 +71,7 @@ export default function MenuListComposition() {
           disablePortal
         >
           {({ TransitionProps, placement }) => (
-            <Grow
-              {...TransitionProps}
-              style={{
-                transformOrigin:
-                  placement === "bottom" ? "center top" : "center bottom",
-              }}
-            >
+            <Grow {...TransitionProps} style={{}}>
               <Paper>
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList
